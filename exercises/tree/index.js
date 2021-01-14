@@ -19,9 +19,11 @@ class Node {
         this.children.push(new Node(data))
     }
     remove(record) {
-        this.children.filter(node => {
-            return this.node != record;
-        })
+        //resign children to new filted children array
+        //fulter return a new array
+        this.children = this.children.filter(node => {
+            return node.data !== data;
+          });
     }
 }
 class Tree {
