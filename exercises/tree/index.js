@@ -18,12 +18,12 @@ class Node {
     add(data) {
         this.children.push(new Node(data))
     }
-    remove(record) {
+    remove(data) {
         //resign children to new filted children array
         //fulter return a new array
         this.children = this.children.filter(node => {
             return node.data !== data;
-          });
+        });
     }
 }
 class Tree {
